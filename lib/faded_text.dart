@@ -33,7 +33,9 @@ class FadedText extends StatelessWidget {
           ),
           textAlign: textAlign,
           textDirection: textDirection,
-          textScaler: textScaler == TextScaler.noScaling ? TextScaler.linear(textScaleFactor) : textScaler,
+          textScaler: textScaler == TextScaler.noScaling
+              ? TextScaler.linear(textScaleFactor)
+              : textScaler,
           maxLines: maxLines,
           locale: locale,
           strutStyle: strutStyle,
@@ -47,7 +49,8 @@ class FadedText extends StatelessWidget {
       builder: (context, constraints) {
         return CustomPaint(
           size: Size(constraints.maxWidth, constraints.maxHeight),
-          painter: _FadedTextPainer(textPainter: textPainter, constraints: constraints),
+          painter: _FadedTextPainer(
+              textPainter: textPainter, constraints: constraints),
         );
       },
     );
@@ -58,7 +61,8 @@ class _FadedTextPainer extends CustomPainter {
   final TextPainter textPainter;
   final BoxConstraints constraints;
 
-  const _FadedTextPainer({required this.textPainter, required this.constraints});
+  const _FadedTextPainer(
+      {required this.textPainter, required this.constraints});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -82,7 +86,10 @@ class _FadedTextPainer extends CustomPainter {
     final textLineHeight = textPainter.preferredLineHeight;
 
     canvas
-      ..drawRect(Offset(0, textPainter.size.height - textLineHeight) & Size(size.width, textLineHeight), paint)
+      ..drawRect(
+          Offset(0, textPainter.size.height - textLineHeight) &
+              Size(size.width, textLineHeight),
+          paint)
       ..restore();
   }
 
@@ -98,7 +105,8 @@ class _FadedTextPainer extends CustomPainter {
     final textSize = textPainter.size;
     final textDidExceedMaxLines = textPainter.didExceedMaxLines;
     final size = constraints.constrain(textSize);
-    final didOverflowHeight = size.height < textSize.height || textDidExceedMaxLines;
+    final didOverflowHeight =
+        size.height < textSize.height || textDidExceedMaxLines;
 
     if (!didOverflowHeight) return null;
 
@@ -107,7 +115,7 @@ class _FadedTextPainer extends CustomPainter {
 
     switch (textPainter.textDirection) {
       case TextDirection.rtl:
-        fadeEnd = 0.0; 
+        fadeEnd = 0.0;
         fadeStart = textSize.width / 4;
       case TextDirection.ltr || null:
         fadeEnd = size.width;
