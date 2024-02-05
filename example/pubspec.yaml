@@ -1,0 +1,19 @@
+name: example
+description: "Faded Text Example."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies:
+  faded_text:
+    path: ../
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  surf_lint_rules: ^3.0.0
+
+flutter:
+  uses-material-design: true
