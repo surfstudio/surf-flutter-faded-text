@@ -232,6 +232,8 @@ class _FadedTextPainer extends CustomPainter {
         fadeStart = fadeEnd - fadeSizePainter.width;
     }
 
+    fadeSizePainter.dispose();
+
     return ui.Gradient.linear(
       Offset(fadeStart, 0),
       Offset(fadeEnd, 0),
