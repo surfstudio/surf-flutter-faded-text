@@ -213,16 +213,23 @@ class _FadedTextPainer extends CustomPainter {
 
     if (!didOverflowHeight) return null;
 
+    final fadeSizePainter = TextPainter(
+      text: TextSpan(style: textPainter.text?.style, text: '\u2026\u2026\u2026\u2026\u2026'),
+      textDirection: textPainter.textDirection,
+      textScaler: textPainter.textScaler,
+      locale: textPainter.locale,
+    )..layout();
+
     double fadeEnd;
     double fadeStart;
 
     switch (textPainter.textDirection) {
       case TextDirection.rtl:
         fadeEnd = 0.0;
-        fadeStart = textSize.width / 4;
+        fadeStart = fadeSizePainter.width;
       case TextDirection.ltr || null:
         fadeEnd = size.width;
-        fadeStart = fadeEnd - textSize.width / 4;
+        fadeStart = fadeEnd - fadeSizePainter.width;
     }
 
     return ui.Gradient.linear(
