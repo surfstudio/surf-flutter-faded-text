@@ -31,11 +31,25 @@ void main() {
       );
       testFadedText(
         widget: const ColoredBox(
-          color: Colors.green,
+          color: Colors.black,
+          child: FadedText(text, maxLines: 3, style: TextStyle(fontSize: 24, color: Colors.white)),
+        ),
+        testName: 'black background',
+        goldenFileName: 'different_colors/faded_text/black_bg',
+      );
+      testFadedText(
+        widget: const DecoratedBox(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/image_for_test.jpeg'),
+              alignment: Alignment.topCenter,
+              fit: BoxFit.contain,
+            ),
+          ),
           child: FadedText(text, maxLines: 3, style: TextStyle(fontSize: 24)),
         ),
-        testName: 'green background',
-        goldenFileName: 'different_colors/faded_text/green_bg',
+        testName: 'image background',
+        goldenFileName: 'different_colors/faded_text/image_bg',
       );
     });
   });
@@ -55,17 +69,40 @@ void main() {
       );
       testFadedText(
         widget: const ColoredBox(
-          color: Colors.green,
+          color: Colors.black,
           child: FadedText.rich(
             TextSpan(
-              children: [TextSpan(text: text), TextSpan(text: text, style: TextStyle(color: Colors.red))],
+              children: [
+                TextSpan(text: text, style: TextStyle(color: Colors.white)),
+                TextSpan(text: text, style: TextStyle(color: Colors.red)),
+              ],
             ),
             style: TextStyle(fontSize: 24),
             maxLines: 7,
           ),
         ),
-        testName: 'green background',
-        goldenFileName: 'different_colors/faded_text_rich/green_bg',
+        testName: 'black background',
+        goldenFileName: 'different_colors/faded_text_rich/black_bg',
+      );
+      testFadedText(
+        widget: const DecoratedBox(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/image_for_test.jpeg'),
+              alignment: Alignment.topCenter,
+              fit: BoxFit.contain,
+            ),
+          ),
+          child: FadedText.rich(
+            TextSpan(
+              children: [TextSpan(text: text), TextSpan(text: text, style: TextStyle(color: Colors.red))],
+            ),
+            style: TextStyle(fontSize: 24),
+            maxLines: 6,
+          ),
+        ),
+        testName: 'image background',
+        goldenFileName: 'different_colors/faded_text_rich/image_bg',
       );
     });
   });
