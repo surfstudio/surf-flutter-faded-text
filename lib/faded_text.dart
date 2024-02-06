@@ -43,13 +43,9 @@ class FadedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        return CustomPaint(
-          size: Size(constraints.maxWidth, constraints.maxHeight),
-          painter: _FadedTextPainer(textPainter: textPainter),
-        );
-      },
+    return CustomPaint(
+      size: Size.infinite,
+      painter: _FadedTextPainer(textPainter: textPainter),
     );
   }
 }
