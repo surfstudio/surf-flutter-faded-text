@@ -152,8 +152,9 @@ class FadedText extends StatelessWidget {
           ),
           textAlign: textAlign ?? defaultTextStyle.textAlign ?? TextAlign.start,
           textDirection: textDirection ?? Directionality.of(context),
-          // ignore: use_named_constants
-          textScaler: textScaler == null ? const TextScaler.linear(1) : textScaler!,
+          textScaler:
+              // ignore: use_named_constants
+              textScaler == null ? const TextScaler.linear(1) : textScaler!,
           maxLines: maxLines,
           locale: locale,
           strutStyle: strutStyle,
