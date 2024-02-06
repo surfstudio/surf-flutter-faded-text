@@ -26,7 +26,7 @@ void main() {
     group('Different colors', () {
       testFadedText(
         widget: const FadedText(text, maxLines: 3, style: TextStyle(fontSize: 24)),
-        testName: 'white background',
+        testName: 'FadedText - white background',
         goldenFileName: 'different_colors/faded_text/white_bg',
       );
       testFadedText(
@@ -34,7 +34,7 @@ void main() {
           color: Colors.black,
           child: FadedText(text, maxLines: 3, style: TextStyle(fontSize: 24, color: Colors.white)),
         ),
-        testName: 'black background',
+        testName: 'FadedText - black background',
         goldenFileName: 'different_colors/faded_text/black_bg',
       );
       testFadedText(
@@ -48,7 +48,7 @@ void main() {
           ),
           child: FadedText(text, maxLines: 3, style: TextStyle(fontSize: 24)),
         ),
-        testName: 'image background',
+        testName: 'FadedText - image background',
         goldenFileName: 'different_colors/faded_text/image_bg',
       );
     });
@@ -64,7 +64,7 @@ void main() {
           style: TextStyle(fontSize: 24),
           maxLines: 7,
         ),
-        testName: 'white background',
+        testName: 'FadedText.rich - white background',
         goldenFileName: 'different_colors/faded_text_rich/white_bg',
       );
       testFadedText(
@@ -81,7 +81,7 @@ void main() {
             maxLines: 7,
           ),
         ),
-        testName: 'black background',
+        testName: 'FadedText.rich - black background',
         goldenFileName: 'different_colors/faded_text_rich/black_bg',
       );
       testFadedText(
@@ -101,7 +101,7 @@ void main() {
             maxLines: 6,
           ),
         ),
-        testName: 'image background',
+        testName: 'FadedText.rich - image background',
         goldenFileName: 'different_colors/faded_text_rich/image_bg',
       );
     });
