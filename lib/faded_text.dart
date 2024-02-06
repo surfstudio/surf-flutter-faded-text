@@ -1,6 +1,7 @@
 import 'dart:ui' as ui show Gradient;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 /// The class for creating fading text in case of overflow.
 class FadedText extends StatelessWidget {
@@ -44,7 +45,7 @@ class FadedText extends StatelessWidget {
   /// This will be null if a [textSpan] is provided instead.
   final String? data;
 
-  /// The text to display as a [TextSpan].
+  /// The text to display as a [InlineSpan].
   ///
   /// This will be null if [data] is provided instead.
   final InlineSpan? textSpan;
@@ -54,19 +55,49 @@ class FadedText extends StatelessWidget {
   /// If null, defaults [DefaultTextStyle] of context.
   final TextStyle? style;
 
-  /// {@macro flutter.widgets.editableText.strutStyle}
+  /// The strut style to use. Strut style defines the strut, which sets minimum vertical layout metrics.
+  ///
+  /// Omitting or providing null will disable strut.
+  ///
+  /// Omitting or providing null for any properties of [StrutStyle] will result in default values being used.
+  /// It is highly recommended to at least specify a [StrutStyle.fontSize].
+  ///
+  ///See [StrutStyle] for details.
   final StrutStyle? strutStyle;
 
-  /// {@macro flutter.widgets.editableText.textAlign}
+  /// How the text should be aligned horizontally.
   final TextAlign? textAlign;
 
-  /// {@macro flutter.widgets.editableText.textDirection}
+  /// The directionality of the text.
+  ///
+  /// This decides how [textAlign] values like [TextAlign.start] and
+  /// [TextAlign.end] are interpreted.
+  ///
+  /// This is also used to disambiguate how to render bidirectional text. For
+  /// example, if the [data] is an English phrase followed by a Hebrew phrase,
+  /// in a [TextDirection.ltr] context the English phrase will be on the left
+  /// and the Hebrew phrase to its right, while in a [TextDirection.rtl]
+  /// context, the English phrase will be on the right and the Hebrew phrase on
+  /// its left.
+  ///
+  /// Defaults to the ambient [Directionality], if any.
   final TextDirection? textDirection;
 
-  /// {@macro flutter.widgets.Text.locale}
+  /// Used to select a font when the same Unicode character can
+  /// be rendered differently, depending on the locale.
+  ///
+  /// It's rarely necessary to set this property. By default its value
+  /// is inherited from the enclosing app with `Localizations.localeOf(context)`.
+  ///
+  /// See [RenderParagraph.locale] for more information.
   final Locale? locale;
 
-  /// {@macro flutter.painting.textPainter.textScaler}
+  /// The font scaling strategy to use when laying out and rendering the text.
+  ///
+  /// The value usually comes from [MediaQuery.textScalerOf], which typically
+  /// reflects the user-specified text scaling value in the platform's
+  /// accessibility settings. The [TextStyle.fontSize] of the text will be
+  /// adjusted by the [TextScaler] before the text is laid out and rendered.
   final TextScaler? textScaler;
 
   /// The required maximum number of lines for the text to span, wrapping if necessary.
@@ -76,13 +107,24 @@ class FadedText extends StatelessWidget {
   /// edge of the box.
   final int maxLines;
 
-  /// {@macro flutter.widgets.Text.semanticsLabel}
+  /// An alternative semantics label for this text.
+  ///
+  /// If present, the semantics of this widget will contain this value instead
+  /// of the actual text. This will overwrite any of the semantics labels applied
+  /// directly to the [TextSpan]s.
+  ///
+  /// This is useful for replacing abbreviations or shorthands with the full
+  /// text value:
+  ///
+  /// ```dart
+  /// const Text(r'$$', semanticsLabel: 'Double dollars')
+  /// ```
   final String? semanticsLabel;
 
-  /// {@macro dart.ui.textHeightBehavior}
+  /// Defines how to apply [TextStyle.height] over and under text.
   final TextHeightBehavior? textHeightBehavior;
 
-  /// {@macro flutter.painting.textPainter.textWidthBasis}
+  /// Defines how to measure the width of the rendered text.
   final TextWidthBasis? textWidthBasis;
 
   @override
