@@ -136,7 +136,8 @@ class FadedText extends StatelessWidget {
       effectiveTextStyle = defaultTextStyle.style.merge(style);
     }
     if (MediaQuery.boldTextOf(context)) {
-      effectiveTextStyle = effectiveTextStyle!.merge(const TextStyle(fontWeight: FontWeight.bold));
+      effectiveTextStyle = effectiveTextStyle!
+          .merge(const TextStyle(fontWeight: FontWeight.bold));
     }
 
     return CustomPaint(
@@ -160,8 +161,9 @@ class FadedText extends StatelessWidget {
           strutStyle: strutStyle,
           textWidthBasis: textWidthBasis ?? defaultTextStyle.textWidthBasis,
           ellipsis: ' ',
-          textHeightBehavior:
-              textHeightBehavior ?? defaultTextStyle.textHeightBehavior ?? DefaultTextHeightBehavior.maybeOf(context),
+          textHeightBehavior: textHeightBehavior ??
+              defaultTextStyle.textHeightBehavior ??
+              DefaultTextHeightBehavior.maybeOf(context),
         ),
       ),
     );
@@ -195,7 +197,10 @@ class _FadedTextPainer extends CustomPainter {
     final textLineHeight = textPainter.preferredLineHeight;
 
     canvas
-      ..drawRect(Offset(0, textPainter.size.height - textLineHeight) & Size(size.width, textLineHeight), paint)
+      ..drawRect(
+          Offset(0, textPainter.size.height - textLineHeight) &
+              Size(size.width, textLineHeight),
+          paint)
       ..restore();
   }
 
@@ -210,12 +215,15 @@ class _FadedTextPainer extends CustomPainter {
 
     final textSize = textPainter.size;
     final textDidExceedMaxLines = textPainter.didExceedMaxLines;
-    final didOverflowHeight = size.height < textSize.height || textDidExceedMaxLines;
+    final didOverflowHeight =
+        size.height < textSize.height || textDidExceedMaxLines;
 
     if (!didOverflowHeight) return null;
 
     final fadeSizePainter = TextPainter(
-      text: TextSpan(style: textPainter.text?.style, text: '\u2026\u2026\u2026\u2026\u2026'),
+      text: TextSpan(
+          style: textPainter.text?.style,
+          text: '\u2026\u2026\u2026\u2026\u2026'),
       textDirection: textPainter.textDirection,
       textScaler: textPainter.textScaler,
       locale: textPainter.locale,
