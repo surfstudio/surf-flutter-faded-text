@@ -28,13 +28,32 @@ dependencies:
 
 ## Example
 
-You need to create an instance of the `FadedText` class like a regular `Text`. The text will overflow according to `maxLines`, which by default corresponds to 1. If you do not specify the text color, it will be white by default.
+You need to create an instance of the `FadedText` class like a regular `Text`. The text will overflow according to `maxLines`, which by default corresponds to 1.
 
 ```dart
   FadedText(
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur siƒnt occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     maxLines: 5,
-    style: const TextStyle(color: Colors.black),
+  )
+```
+
+You can also create `FadedText.rich` like regular `Text.rich`.
+
+```dart
+  FadedText.rich(
+    TextSpan(
+      children: [
+        TextSpan(
+          text:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '),
+          TextSpan(
+            text:
+              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+    maxLines: 4,
   )
 ```
 
