@@ -13,7 +13,8 @@ void main() {
     required String goldenFileName,
   }) {
     testGoldens(testName, (tester) async {
-      await tester.pumpWidgetBuilder(widget);
+      await tester
+          .pumpWidgetBuilder(Theme(data: ThemeData.light(), child: widget));
       await multiScreenGolden(tester, goldenFileName);
     });
   }
