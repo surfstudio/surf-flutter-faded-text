@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:test/scaffolding.dart';
 
-void main() {
+void main() async {
+  await loadAppFonts();
   const text =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur siƒnt occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum';
 
@@ -13,8 +14,7 @@ void main() {
     required String goldenFileName,
   }) {
     testGoldens(testName, (tester) async {
-      await tester
-          .pumpWidgetBuilder(Theme(data: ThemeData.light(), child: widget));
+      await tester.pumpWidgetBuilder(widget);
       await multiScreenGolden(tester, goldenFileName);
     });
   }
