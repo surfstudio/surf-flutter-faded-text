@@ -13,16 +13,8 @@ void main() {
     required String goldenFileName,
   }) {
     testGoldens(testName, (tester) async {
-      final builder = DeviceBuilder()
-        ..overrideDevicesForAllScenarios(devices: [
-          Device.phone,
-          Device.iphone11,
-          Device.tabletPortrait,
-          Device.tabletLandscape,
-        ])
-        ..addScenario(widget: widget);
-      await tester.pumpDeviceBuilder(builder);
-      await screenMatchesGolden(tester, goldenFileName);
+      await tester.pumpWidgetBuilder(widget);
+      await multiScreenGolden(tester, goldenFileName);
     });
   }
 
@@ -67,20 +59,17 @@ void main() {
 
     group('Different text size and height', () {
       testFadedText(
-        widget: const FadedText(text,
-            maxLines: 2, style: TextStyle(fontSize: 16, height: 1.5)),
+        widget: const FadedText(text, maxLines: 2, style: TextStyle(fontSize: 16, height: 1.5)),
         testName: 'FadedText - small size',
         goldenFileName: 'different_sizes/faded_text/small_size',
       );
       testFadedText(
-        widget: const FadedText(text,
-            maxLines: 3, style: TextStyle(fontSize: 32, height: 2)),
+        widget: const FadedText(text, maxLines: 3, style: TextStyle(fontSize: 32, height: 2)),
         testName: 'FadedText - medium size',
         goldenFileName: 'different_sizes/faded_text/medium_size',
       );
       testFadedText(
-        widget: const FadedText(text,
-            maxLines: 3, style: TextStyle(fontSize: 64, height: 2.5)),
+        widget: const FadedText(text, maxLines: 3, style: TextStyle(fontSize: 64, height: 2.5)),
         testName: 'FadedText - large size',
         goldenFileName: 'different_sizes/faded_text/large_size',
       );
@@ -121,18 +110,12 @@ void main() {
 
     group('Different text direction', () {
       testFadedText(
-        widget: const FadedText(text,
-            maxLines: 2,
-            style: TextStyle(fontSize: 24),
-            textDirection: TextDirection.ltr),
+        widget: const FadedText(text, maxLines: 2, style: TextStyle(fontSize: 24), textDirection: TextDirection.ltr),
         testName: 'FadedText - TextDirection.ltr',
         goldenFileName: 'different_text_direction/faded_text/ltr',
       );
       testFadedText(
-        widget: const FadedText(text,
-            maxLines: 3,
-            style: TextStyle(fontSize: 24),
-            textDirection: TextDirection.rtl),
+        widget: const FadedText(text, maxLines: 3, style: TextStyle(fontSize: 24), textDirection: TextDirection.rtl),
         testName: 'FadedText - TextDirection.rtl',
         goldenFileName: 'different_text_direction/faded_text/rtl',
       );
@@ -146,10 +129,7 @@ void main() {
           TextSpan(
             children: [
               TextSpan(text: text),
-              TextSpan(
-                  text: text,
-                  style:
-                      TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
+              TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
             ],
           ),
           style: TextStyle(fontSize: 24),
@@ -165,10 +145,7 @@ void main() {
             TextSpan(
               children: [
                 TextSpan(text: text, style: TextStyle(color: Colors.white)),
-                TextSpan(
-                    text: text,
-                    style: TextStyle(
-                        color: Colors.red, fontStyle: FontStyle.italic)),
+                TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic)),
               ],
             ),
             style: TextStyle(fontSize: 24),
@@ -191,10 +168,7 @@ void main() {
             TextSpan(
               children: [
                 TextSpan(text: text),
-                TextSpan(
-                    text: text,
-                    style: TextStyle(
-                        color: Colors.red, fontStyle: FontStyle.italic))
+                TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
               ],
             ),
             style: TextStyle(fontSize: 24),
@@ -212,10 +186,7 @@ void main() {
           TextSpan(
             children: [
               TextSpan(text: text),
-              TextSpan(
-                  text: text,
-                  style:
-                      TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
+              TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
             ],
           ),
           style: TextStyle(fontSize: 16, height: 1.5),
@@ -229,10 +200,7 @@ void main() {
           TextSpan(
             children: [
               TextSpan(text: text),
-              TextSpan(
-                  text: text,
-                  style:
-                      TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
+              TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
             ],
           ),
           style: TextStyle(fontSize: 32, height: 2),
@@ -246,10 +214,7 @@ void main() {
           TextSpan(
             children: [
               TextSpan(text: text),
-              TextSpan(
-                  text: text,
-                  style:
-                      TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
+              TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
             ],
           ),
           style: TextStyle(fontSize: 64, height: 2.5),
@@ -268,8 +233,7 @@ void main() {
               TextSpan(text: text.substring(0, 50)),
               TextSpan(
                 text: text.substring(50, text.length),
-                style: const TextStyle(
-                    color: Colors.red, fontStyle: FontStyle.italic),
+                style: const TextStyle(color: Colors.red, fontStyle: FontStyle.italic),
               ),
             ],
           ),
@@ -287,8 +251,7 @@ void main() {
               TextSpan(text: text.substring(0, 50)),
               TextSpan(
                 text: text.substring(50, text.length),
-                style: const TextStyle(
-                    color: Colors.red, fontStyle: FontStyle.italic),
+                style: const TextStyle(color: Colors.red, fontStyle: FontStyle.italic),
               ),
             ],
           ),
@@ -306,8 +269,7 @@ void main() {
               TextSpan(text: text.substring(0, 20)),
               TextSpan(
                 text: text.substring(20, text.length),
-                style: const TextStyle(
-                    color: Colors.red, fontStyle: FontStyle.italic),
+                style: const TextStyle(color: Colors.red, fontStyle: FontStyle.italic),
               ),
             ],
           ),
@@ -326,10 +288,7 @@ void main() {
           TextSpan(
             children: [
               TextSpan(text: text),
-              TextSpan(
-                  text: text,
-                  style:
-                      TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
+              TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
             ],
           ),
           style: TextStyle(fontSize: 24),
@@ -344,10 +303,7 @@ void main() {
           TextSpan(
             children: [
               TextSpan(text: text),
-              TextSpan(
-                  text: text,
-                  style:
-                      TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
+              TextSpan(text: text, style: TextStyle(color: Colors.red, fontStyle: FontStyle.italic))
             ],
           ),
           style: TextStyle(fontSize: 24),
