@@ -1,7 +1,6 @@
 ---
 name: New feature
 labels: enhancement
-assignees: MbIXjkee
 ---
 
 <!--

@@ -1,7 +1,6 @@
 ---
 name: Bug fix
 about: Fixing a problem with Faded Text.
-assignees: MbIXjkee
 ---
 
 <!--

@@ -2,7 +2,6 @@
 name: Feature Request
 about: I'd like Faded Text to do something new.
 labels: enhancement
-assignees: MbIXjkee
 ---
 
 <!--
