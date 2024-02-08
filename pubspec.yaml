@@ -1,5 +1,5 @@
 name: faded_text
-version: 0.0.1
+version: 0.0.2
 description: "The package for creating fading text in case of overflow"
 repository: "https://github.com/surfstudio/surf-flutter-faded-text"
 issue_tracker: "https://github.com/surfstudio/surf-flutter-faded-text/issues"
