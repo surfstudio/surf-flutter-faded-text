@@ -1,16 +1,20 @@
-# Faded Text
+<p align="center">
+<img src="./docs/images/cover.png" height="220" />
+</p>
 
-[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/main.yml?logo=github&logoColor=white)](https://github.com/surfstudio/surf-flutter-faded-text)
-[![Pub Version](https://img.shields.io/pub/v/faded_text?logo=dart&logoColor=white)](https://pub.dev/packages/faded_text)
-[![Pub Likes](https://badgen.net/pub/likes/faded_text)](https://pub.dev/packages/faded_text)
-[![Pub popularity](https://badgen.net/pub/popularity/faded_text)](https://pub.dev/packages/faded_text/score)
-![Flutter Platform](https://badgen.net/pub/flutter-platform/faded_text)
+# Overview 🐄 
 
-## Description
+Faded Text is a package that allows you to create a fading text in case of overflow. If the text is overflow, it will look like this:
 
-Faded Text is a package that allows you to create a fading text in case of overflow.
+<p align="center">
+ <img src="./docs/images/example1.png" height="300" />
+ <img src="./docs/images/example2.png" height="300" />
+</p>
 
-## Installation
+Otherwise it will look like plain text.
+
+
+## Installation 
 
 Add `faded_text` to your `pubspec.yaml` file:
 
