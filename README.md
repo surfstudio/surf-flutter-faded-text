@@ -4,7 +4,10 @@
 
 ## Overview 🐄 
 
-Faded Text is a package that allows you to create a fading text in case of overflow. If the text is overflow, it will look like this:
+By default, text fade effects occur in the bottom-up direction if the content contains multiple lines. But sometimes it is necessary to make the fade effect from left to right, as it is done for single-line text in Flutter.
+This package solves this problem. It allows you to insert fade when wrap text on overflow from left to right.
+
+If the text is overflow, it will look like this:
 
 <p align="center">
  <img src="./docs/images/example1.png" height="300" />
