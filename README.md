@@ -14,7 +14,7 @@ Faded Text is a package that allows you to create a fading text in case of overf
 Otherwise it will look like plain text.
 
 
-## Installation 
+# Installation 
 
 Add `faded_text` to your `pubspec.yaml` file:
 
@@ -25,7 +25,7 @@ dependencies:
 
 <p>At this moment, the current version of <code>faded_text</code> is <a href="https://pub.dev/packages/faded_text"><img style="vertical-align:middle;" src="https://img.shields.io/pub/v/faded_text.svg" alt="faded_text version"></a>.</p>
 
-## Example
+# Example
 
 You need to create an instance of the `FadedText` class like a regular `Text`. The text will overflow according to `maxLines`, which by default corresponds to 1.
 
