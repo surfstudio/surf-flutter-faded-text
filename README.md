@@ -13,7 +13,7 @@
 [![Pub popularity](https://badgen.net/pub/popularity/faded_text)](https://pub.dev/packages/faded_text/score)
 [![License: Apache 2.0](https://img.shields.io/badge/license-apache-purple.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
-Enhance your Flutter app with this package, designed to seamlessly integrate left-to-right fade effects for multi-line text. Made by [Surf :surfer:](https://surf.dev/flutter/) Flutter team :cow2:
+Enhance your Flutter app with this package, designed to seamlessly integrate left-to-right fade effects for multi-line text. Perfect for when you need that single-line text elegance in more complex layouts. Made by [Surf :surfer:](https://surf.dev/flutter/) Flutter team :cow2:
 
 ## Description 
 
@@ -37,39 +37,123 @@ dependencies:
 
 You need to create an instance of the `FadedText` class like a regular `Text`.
 
-```dart
-  FadedText(
-    'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...',
-    maxLines: 5,
-  )
-```
+<table>
+<tr>
+  <th>Regular `Text` with fade effect</th>
+  <th>`FadedText`</th>
+</tr>
+<tr>
+  <td>
+
+  ```dart
+    Text(
+      'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...',
+      maxLines: 5,
+      overflow: TextOverflow.fade,
+    )
+  ```
+  </td>
+  <td>
+
+  ```dart
+      FadedText(
+        'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...',
+        maxLines: 5,
+      )
+  ```
+  </td>
+</tr>
+</table>
+
+Output:
+
+<table>
+  <tr>
+    <th>Fade effect of intrinsic `Text`</th>
+    <th>Fade effect of `FadedText`</th>
+  </tr>
+  <tr>
+    <td>
+        <img src="./docs/images/example_text.png" height="300" />
+    </td>
+     <td>
+        <img src="./docs/images/example_faded_text.png" height="300" />
+    </td>
+  </tr>
+</table>
+
 
 You can also create `FadedText.rich` like regular `Text.rich`.
 
-```dart
-  FadedText.rich(
-    TextSpan(
-      children: [
-        TextSpan(
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...'),
+<table>
+<tr>
+  <th>Regular `Tex.rich` with fade effect</th>
+  <th>`FadedText.rich`</th>
+</tr>
+<tr>
+  <td>
+
+  ```dart
+    Text.rich(
+      TextSpan(
+        children: [
+          TextSpan(
+            text:
+              'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...',
+            ),
           TextSpan(
             text:
               'Ut enim ad minim veniam, quis nostrud and so on...',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+        maxLines: 4,
+        overflow: TextOverflow.fade,
+      ),
+  ```
+  </td>
+  <td>
+
+  ```dart
+    FadedText.rich(
+      TextSpan(
+        children: [
+          TextSpan(
+            text:
+              'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...'),
+          TextSpan(
+            text:
+              'Ut enim ad minim veniam, quis nostrud and so on...',
+            style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ],
       ),
-    maxLines: 4,
-  )
-```
+      maxLines: 4,
+    )
+  ```
+  </td>
+</tr>
+</table>
 
-If the text is overflow, it will look like this:
+Output:
 
-<p align="center">
- <img src="./docs/images/example1.png" height="300" />
- <img src="./docs/images/example2.png" height="300" />
-</p>
+<table>
+  <tr>
+    <th>Fade effect of intrinsic Text.rich</th>
+    <th>Fade effect of FadedText.rich</th>
+  </tr>
+  <tr>
+    <td>
+        <img src="./docs/images/example_text_rich.png" height="300" />
+    </td>
+     <td>
+        <img src="./docs/images/example_faded_text_rich.png" height="300" />
+    </td>
+  </tr>
+</table>
+
+
 
 ## Changelog
 
