@@ -38,31 +38,33 @@ dependencies:
 You need to create an instance of the `FadedText` class like a regular `Text`.
 
 <table>
-<tr>
-  <th>Regular `Text` with fade effect</th>
-  <th>`FadedText`</th>
-</tr>
-<tr>
+  <tr>
+    <th>Regular `Text` with fade effect</th>
+    <th>`FadedText`</th>
+  </tr>
+  <tr>
   <td>
 
-  ```dart
-    Text(
-      'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...',
-      maxLines: 5,
-      overflow: TextOverflow.fade,
-    )
-  ```
-  </td>
-  <td>
-
-  ```dart
-      FadedText(
-        'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...',
+    ```dart
+      Text(
+        'Lorem ipsum dolor sit amet, 
+        consectetur adipisci and blah blah...',
         maxLines: 5,
+        overflow: TextOverflow.fade,
       )
-  ```
+    ```
   </td>
-</tr>
+  <td>
+
+    ```dart
+        FadedText(
+          'Lorem ipsum dolor sit amet, 
+          consectetur adipisci and blah blah...',
+          maxLines: 5,
+        )
+    ```
+  </td>
+  </tr>
 </table>
 
 Output:
@@ -74,10 +76,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="./docs/images/example_text.png" height="300" />
+        <img src="./docs/images/example_text.png"/>
     </td>
      <td>
-        <img src="./docs/images/example_faded_text.png" height="300" />
+        <img src="./docs/images/example_faded_text.png"/>
     </td>
   </tr>
 </table>
@@ -99,12 +101,16 @@ You can also create `FadedText.rich` like regular `Text.rich`.
         children: [
           TextSpan(
             text:
-              'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...',
+              'Lorem ipsum dolor sit amet, 
+              consectetur adipisci and blah blah...',
             ),
           TextSpan(
             text:
-              'Ut enim ad minim veniam, quis nostrud and so on...',
-            style: TextStyle(fontWeight: FontWeight.bold),
+              'Ut enim ad minim veniam, 
+              quis nostrud and so on...',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -121,11 +127,15 @@ You can also create `FadedText.rich` like regular `Text.rich`.
         children: [
           TextSpan(
             text:
-              'Lorem ipsum dolor sit amet, consectetur adipisci and blah blah...'),
+              'Lorem ipsum dolor sit amet, 
+              consectetur adipisci and blah blah...'),
           TextSpan(
             text:
-              'Ut enim ad minim veniam, quis nostrud and so on...',
-            style: TextStyle(fontWeight: FontWeight.bold),
+              'Ut enim ad minim veniam, 
+              quis nostrud and so on...',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),
@@ -145,10 +155,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="./docs/images/example_text_rich.png" height="300" />
+        <img src="./docs/images/example_text_rich.png"/>
     </td>
      <td>
-        <img src="./docs/images/example_faded_text_rich.png" height="300" />
+        <img src="./docs/images/example_faded_text_rich.png"/>
     </td>
   </tr>
 </table>
