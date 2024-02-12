@@ -38,33 +38,33 @@ dependencies:
 You need to create an instance of the `FadedText` class like a regular `Text`.
 
 <table>
-  <tr>
-    <th>Regular `Text` with fade effect</th>
-    <th>`FadedText`</th>
-  </tr>
-  <tr>
+<tr>
+  <th>Regular `Text` with fade effect</th>
+  <th>`FadedText`</th>
+</tr>
+<tr>
   <td>
 
-    ```dart
-      Text(
-        'Lorem ipsum dolor sit amet, 
-        consectetur adipisci and blah blah...',
-        maxLines: 5,
-        overflow: TextOverflow.fade,
-      )
-    ```
+  ```dart
+  Text(
+    'Lorem ipsum dolor sit amet, 
+    consectetur adipisci and blah blah...',
+    maxLines: 5,
+    overflow: TextOverflow.fade,
+  )
+  ```
   </td>
   <td>
 
-    ```dart
-        FadedText(
-          'Lorem ipsum dolor sit amet, 
-          consectetur adipisci and blah blah...',
-          maxLines: 5,
-        )
-    ```
+  ```dart
+  FadedText(
+    'Lorem ipsum dolor sit amet, 
+    consectetur adipisci and blah blah...',
+    maxLines: 5,
+  )
+  ```
   </td>
-  </tr>
+</tr>
 </table>
 
 Output:
@@ -96,51 +96,52 @@ You can also create `FadedText.rich` like regular `Text.rich`.
   <td>
 
   ```dart
-    Text.rich(
-      TextSpan(
-        children: [
-          TextSpan(
-            text:
-              'Lorem ipsum dolor sit amet, 
-              consectetur adipisci and blah blah...',
-            ),
-          TextSpan(
-            text:
-              'Ut enim ad minim veniam, 
-              quis nostrud and so on...',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-        maxLines: 4,
-        overflow: TextOverflow.fade,
-      ),
-  ```
-  </td>
-  <td>
-
-  ```dart
-    FadedText.rich(
-      TextSpan(
-        children: [
-          TextSpan(
-            text:
-              'Lorem ipsum dolor sit amet, 
-              consectetur adipisci and blah blah...'),
-          TextSpan(
-            text:
-              'Ut enim ad minim veniam, 
-              quis nostrud and so on...',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
+  Text.rich(
+    TextSpan(
+      children: [
+        TextSpan(
+          text:
+            'Lorem ipsum dolor sit amet, 
+            consectetur adipisci 
+            and blah blah...',
+          ),
+        TextSpan(
+          text:
+            'Ut enim ad minim veniam, 
+            quis nostrud and so on...',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
             ),
           ),
         ],
       ),
       maxLines: 4,
-    )
+      overflow: TextOverflow.fade,
+    ),
+  ```
+  </td>
+  <td>
+
+  ```dart
+  FadedText.rich(
+    TextSpan(
+      children: [
+        TextSpan(
+          text:
+            'Lorem ipsum dolor sit amet,   
+            consectetur adipisci and blah blah...'),
+        TextSpan(
+          text:
+            'Ut enim ad minim veniam, 
+            quis nostrud and so on...',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+    maxLines: 4,
+  )
   ```
   </td>
 </tr>
