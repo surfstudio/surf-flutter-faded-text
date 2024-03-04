@@ -76,10 +76,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="./docs/images/example_text.png"/>
+        <img src="./doc/images/example_text.png"/>
     </td>
      <td>
-        <img src="./docs/images/example_faded_text.png"/>
+        <img src="./doc/images/example_faded_text.png"/>
     </td>
   </tr>
 </table>
@@ -156,10 +156,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="./docs/images/example_text_rich.png"/>
+        <img src="./doc/images/example_text_rich.png"/>
     </td>
      <td>
-        <img src="./docs/images/example_faded_text_rich.png"/>
+        <img src="./doc/images/example_faded_text_rich.png"/>
     </td>
   </tr>
 </table>
