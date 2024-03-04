@@ -1,67 +1,174 @@
-<p align="center">
-<img src="./docs/images/cover.png" height="220" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/surfstudio/surf-flutter-faded-text/assets/54618146/71c4a82d-f93e-427c-9683-dc2e71203f47">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/surfstudio/surf-flutter-faded-text/assets/54618146/2683a722-0068-4a45-9e35-90480f41b836">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/surfstudio/surf-flutter-faded-text/assets/54618146/2683a722-0068-4a45-9e35-90480f41b836">
+</picture>
 
-# Overview 🐄 
+<br></br>
 
-By default, text fade effects occur in the bottom-up direction if the content contains multiple lines. But sometimes it is necessary to make the fade effect from left to right, as it is done for single-line text in Flutter.
-This package solves this problem. It allows you to insert fade when wrap text on overflow from left to right.
+[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/main.yml?logo=github&logoColor=white)](https://github.com/surfstudio/yandex-mapkit-lite-flutter)
+[![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/surf-flutter-faded-text?logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/yandex-mapkit-lite-flutter)
+[![Pub Version](https://img.shields.io/pub/v/faded-text?logo=dart&logoColor=white)](https://pub.dev/packages/faded_text)
+[![Pub Likes](https://badgen.net/pub/likes/faded_text)](https://pub.dev/packages/faded_text)
+[![Pub popularity](https://badgen.net/pub/popularity/faded_text)](https://pub.dev/packages/faded_text/score)
+[![License: Apache 2.0](https://img.shields.io/badge/license-apache-purple.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
-If the text is overflow, it will look like this:
+Enhance your Flutter app with this package, designed to seamlessly integrate left-to-right fade effects for multi-line text. Perfect for when you need that single-line text elegance in more complex layouts. Made by [Surf :surfer:](https://surf.dev/flutter/) Flutter team :cow2:
 
-<p align="center">
- <img src="./docs/images/example1.png" height="300" />
- <img src="./docs/images/example2.png" height="300" />
-</p>
+## Description 
 
-Otherwise it will look like plain text.
+- :1234: Enabled on every platform - the package is fully written on Flutter side and enabled on every platform
+- :recycle: Fully covered by tests - guaranteeing the result and expectations from this package
+- :notebook_with_decorative_cover: End-to-end documentation - every aspect of implementation is documented, so there is full understanding
+- :cow2: Support from the best Flutter experts - we are open to any enhancement ideas and contributions
 
+## Usage
 
-## Installation 
+### Installation
 
 Add `faded_text` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  faded_text: $currentVersion$
+  faded_text: 0.0.3
 ```
 
-<p>At this moment, the current version of <code>faded_text</code> is <a href="https://pub.dev/packages/faded_text"><img style="vertical-align:middle;" src="https://img.shields.io/pub/v/faded_text.svg" alt="faded_text version"></a>.</p>
+### Example
 
-## Example
+You need to create an instance of the `FadedText` class like a regular `Text`.
 
-You need to create an instance of the `FadedText` class like a regular `Text`. The text will overflow according to `maxLines`, which by default corresponds to 1.
+<table>
+<tr>
+  <th>Regular `Text` with fade effect</th>
+  <th>`FadedText`</th>
+</tr>
+<tr>
+  <td>
 
-```dart
+  ```dart
+  Text(
+    'Lorem ipsum dolor sit amet, 
+    consectetur adipisci and blah blah...',
+    maxLines: 5,
+    overflow: TextOverflow.fade,
+  )
+  ```
+  </td>
+  <td>
+
+  ```dart
   FadedText(
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur siƒnt occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+    'Lorem ipsum dolor sit amet, 
+    consectetur adipisci and blah blah...',
     maxLines: 5,
   )
-```
+  ```
+  </td>
+</tr>
+</table>
+
+Output:
+
+<table>
+  <tr>
+    <th>Fade effect of intrinsic `Text`</th>
+    <th>Fade effect of `FadedText`</th>
+  </tr>
+  <tr>
+    <td>
+        <img src="./docs/images/example_text.png"/>
+    </td>
+     <td>
+        <img src="./docs/images/example_faded_text.png"/>
+    </td>
+  </tr>
+</table>
+
 
 You can also create `FadedText.rich` like regular `Text.rich`.
 
-```dart
+<table>
+<tr>
+  <th>Regular `Tex.rich` with fade effect</th>
+  <th>`FadedText.rich`</th>
+</tr>
+<tr>
+  <td>
+
+  ```dart
+  Text.rich(
+    TextSpan(
+      children: [
+        TextSpan(
+          text:
+            'Lorem ipsum dolor sit amet, 
+            consectetur adipisci 
+            and blah blah...',
+          ),
+        TextSpan(
+          text:
+            'Ut enim ad minim veniam, 
+            quis nostrud and so on...',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+      maxLines: 4,
+      overflow: TextOverflow.fade,
+    ),
+  ```
+  </td>
+  <td>
+
+  ```dart
   FadedText.rich(
     TextSpan(
       children: [
         TextSpan(
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '),
-          TextSpan(
-            text:
-              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            'Lorem ipsum dolor sit amet,   
+            consectetur adipisci and blah blah...'),
+        TextSpan(
+          text:
+            'Ut enim ad minim veniam, 
+            quis nostrud and so on...',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
           ),
-        ],
-      ),
+        ),
+      ],
+    ),
     maxLines: 4,
   )
-```
+  ```
+  </td>
+</tr>
+</table>
+
+Output:
+
+<table>
+  <tr>
+    <th>Fade effect of intrinsic Text.rich</th>
+    <th>Fade effect of FadedText.rich</th>
+  </tr>
+  <tr>
+    <td>
+        <img src="./docs/images/example_text_rich.png"/>
+    </td>
+     <td>
+        <img src="./docs/images/example_faded_text_rich.png"/>
+    </td>
+  </tr>
+</table>
+
+
 
 ## Changelog
 
-All notable changes to this project will be documented in [this file](./CHANGELOG.md).
+All notable changes to this project will be documented [here](./CHANGELOG.md).
 
 ## Issues
 
