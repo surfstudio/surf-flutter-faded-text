@@ -76,10 +76,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="https://github.com/surfstudio/surf-flutter-faded-text/blob/main/doc/images/example_text.png"/>
+      <img src="https://i.ibb.co/dLghB0q/example-text.png">
     </td>
-     <td>
-        <img src="https://github.com/surfstudio/surf-flutter-faded-text/blob/main/doc/images/example_faded_text.png"/>
+    <td>
+      <img src="https://i.ibb.co/3vjgKJg/example-faded-text.png">
     </td>
   </tr>
 </table>
@@ -156,10 +156,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="https://github.com/surfstudio/surf-flutter-faded-text/blob/main/doc/images/example_text_rich.png"/>
+      <img src="https://i.ibb.co/PznwK7t/example-text-rich.png">
     </td>
-     <td>
-        <img src="https://github.com/surfstudio/surf-flutter-faded-text/blob/main/doc/images/example_faded_text_rich.png"/>
+    <td>
+      <img src="https://i.ibb.co/hM0Kk3g/example-faded-text-rich.png">
     </td>
   </tr>
 </table>

@@ -67,8 +67,8 @@ You can also create `FadedText.rich` like regular `Text.rich`.
 If the text is overflow, it will look like this:
 
 <p align="center">
- <img src="https://github.com/surfstudio/surf-flutter-faded-text/blob/main/doc/images/example1.png" height="300" />
- <img src="https://github.com/surfstudio/surf-flutter-faded-text/blob/main/doc/images/example2.png" height="300" />
+ <img src="./doc/images/example1.png" height="300" />
+ <img src="./doc/images/example2.png" height="300" />
 </p>
 
 ## Changelog
