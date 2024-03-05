@@ -6,8 +6,8 @@
 
 <br></br>
 
-[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/main.yml?logo=github&logoColor=white)](https://github.com/surfstudio/yandex-mapkit-lite-flutter)
-[![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/surf-flutter-faded-text?logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/yandex-mapkit-lite-flutter)
+[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/main.yml?logo=github&logoColor=white)](https://github.com/surfstudio/surf-flutter-faded-text)
+[![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/surf-flutter-faded-text?logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/surf-flutter-faded-text)
 [![Pub Version](https://img.shields.io/pub/v/faded-text?logo=dart&logoColor=white)](https://pub.dev/packages/faded_text)
 [![Pub Likes](https://badgen.net/pub/likes/faded_text)](https://pub.dev/packages/faded_text)
 [![Pub popularity](https://badgen.net/pub/popularity/faded_text)](https://pub.dev/packages/faded_text/score)
@@ -30,7 +30,7 @@ Add `faded_text` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  faded_text: 0.0.3
+  faded_text: 0.0.4
 ```
 
 ### Example
@@ -76,10 +76,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="./doc/images/example_text.png"/>
+        <img src="https://github.com/surfstudio/surf-flutter-faded-text/doc/images/example_text.png"/>
     </td>
      <td>
-        <img src="./doc/images/example_faded_text.png"/>
+        <img src="https://github.com/surfstudio/surf-flutter-faded-text/doc/images/example_faded_text.png"/>
     </td>
   </tr>
 </table>
@@ -156,10 +156,10 @@ Output:
   </tr>
   <tr>
     <td>
-        <img src="./doc/images/example_text_rich.png"/>
+        <img src="https://github.com/surfstudio/surf-flutter-faded-text/doc/images/example_text_rich.png"/>
     </td>
      <td>
-        <img src="./doc/images/example_faded_text_rich.png"/>
+        <img src="https://github.com/surfstudio/surf-flutter-faded-text/doc/images/example_faded_text_rich.png"/>
     </td>
   </tr>
 </table>

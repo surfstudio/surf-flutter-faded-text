@@ -30,7 +30,7 @@ Add `faded_text` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  faded_text: 0.0.3
+  faded_text: 0.0.4
 ```
 
 ### Example
@@ -67,8 +67,8 @@ You can also create `FadedText.rich` like regular `Text.rich`.
 If the text is overflow, it will look like this:
 
 <p align="center">
- <img src="./doc/images/example1.png" height="300" />
- <img src="./doc/images/example2.png" height="300" />
+ <img src="https://github.com/surfstudio/surf-flutter-faded-text/doc/images/example1.png" height="300" />
+ <img src="https://github.com/surfstudio/surf-flutter-faded-text/doc/images/example2.png" height="300" />
 </p>
 
 ## Changelog
