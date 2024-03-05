@@ -1,5 +1,5 @@
 name: faded_text
-version: 0.0.4
+version: 0.0.5
 description: "Enhance your Flutter app with this package, designed to seamlessly integrate left-to-right fade effects for multi-line text. Perfect for when you need that single-line text elegance in more complex layouts."
 repository: "https://github.com/surfstudio/surf-flutter-faded-text"
 issue_tracker: "https://github.com/surfstudio/surf-flutter-faded-text/issues"
