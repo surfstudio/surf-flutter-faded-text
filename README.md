@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/surfstudio/surf-flutter-faded-text/assets/54618146/71c4a82d-f93e-427c-9683-dc2e71203f47">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/surfstudio/surf-flutter-faded-text/assets/54618146/2683a722-0068-4a45-9e35-90480f41b836">
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/surfstudio/surf-flutter-faded-text/assets/54618146/2683a722-0068-4a45-9e35-90480f41b836">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/surfstudio/surf-flutter-faded-text/main/assets/fade_dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/surfstudio/surf-flutter-faded-text/main/assets/fade_light.png">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://raw.githubusercontent.com/surfstudio/surf-flutter-faded-text/main/assets/fade_light.png">
 </picture>
 
 <br></br>
