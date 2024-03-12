@@ -1,3 +1,7 @@
+## 0.0.6
+
+* Updated logo links on readme
+
 ## 0.0.5
 
 * Updated links in readme files

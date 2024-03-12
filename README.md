@@ -30,7 +30,7 @@ Add `faded_text` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  faded_text: 0.0.5
+  faded_text: 0.0.6
 ```
 
 ### Example
