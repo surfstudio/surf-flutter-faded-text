@@ -15,7 +15,7 @@
 
 Enhance your Flutter app with this package, designed to seamlessly integrate left-to-right fade effects for multi-line text. Perfect for when you need that single-line text elegance in more complex layouts. Made by [Surf :surfer:](https://surf.dev/flutter/) Flutter team :cow2:
 
-## Description 
+## Overview
 
 - :1234: Enabled on every platform - the package is fully written on Flutter side and enabled on every platform
 - :recycle: Fully covered by tests - guaranteeing the result and expectations from this package
