@@ -15,7 +15,7 @@ Made by [Surf 🏄‍♂️🏄‍♂️🏄‍♂️](https://surf.dev/)
 
 <br></br>
 
-[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/main.yml?logo=github&logoColor=white)](https://github.com/surfstudio/surf-flutter-faded-text)
+[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/on_pull_request.yml?logo=github&logoColor=white)](https://github.com/surfstudio/surf-flutter-faded-text)
 [![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/surf-flutter-faded-text?logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/surf-flutter-faded-text)
 [![Pub Version](https://img.shields.io/pub/v/faded-text?logo=dart&logoColor=white)](https://pub.dev/packages/faded_text)
 [![Pub Likes](https://badgen.net/pub/likes/faded_text)](https://pub.dev/packages/faded_text)
