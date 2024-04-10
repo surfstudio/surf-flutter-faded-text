@@ -7,6 +7,13 @@
 
 Made by [Surf 🏄‍♂️🏄‍♂️🏄‍♂️](https://surf.dev/)
 
+[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/on_pull_request.yml?logo=github&logoColor=white)](https://github.com/surfstudio/surf-flutter-faded-text)
+[![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/surf-flutter-faded-text?logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/surf-flutter-faded-text)
+[![Pub Version](https://img.shields.io/pub/v/faded-text?logo=dart&logoColor=white)](https://pub.dev/packages/faded_text)
+[![Pub Likes](https://badgen.net/pub/likes/faded_text)](https://pub.dev/packages/faded_text)
+[![Pub popularity](https://badgen.net/pub/popularity/faded_text)](https://pub.dev/packages/faded_text/score)
+[![License: Apache 2.0](https://img.shields.io/badge/license-apache-purple.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/surfstudio/surf-flutter-faded-text/main/assets/fade_dark.png">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/surfstudio/surf-flutter-faded-text/main/assets/fade_light.png">
@@ -14,13 +21,6 @@ Made by [Surf 🏄‍♂️🏄‍♂️🏄‍♂️](https://surf.dev/)
 </picture>
 
 <br></br>
-
-[![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/surf-flutter-faded-text/on_pull_request.yml?logo=github&logoColor=white)](https://github.com/surfstudio/surf-flutter-faded-text)
-[![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/surf-flutter-faded-text?logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/surf-flutter-faded-text)
-[![Pub Version](https://img.shields.io/pub/v/faded-text?logo=dart&logoColor=white)](https://pub.dev/packages/faded_text)
-[![Pub Likes](https://badgen.net/pub/likes/faded_text)](https://pub.dev/packages/faded_text)
-[![Pub popularity](https://badgen.net/pub/popularity/faded_text)](https://pub.dev/packages/faded_text/score)
-[![License: Apache 2.0](https://img.shields.io/badge/license-apache-purple.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 Enhance your Flutter app with this package, designed to seamlessly integrate left-to-right fade effects for multi-line text. Perfect for when you need that single-line text elegance in more complex layouts. Made by [Surf :surfer:](https://surf.dev/flutter/) Flutter team :cow2:
 
