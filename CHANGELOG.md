@@ -1,3 +1,7 @@
+## 0.0.7
+
+* Updated readme file for rebranding
+
 ## 0.0.6
 
 * Updated logo links on readme
