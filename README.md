@@ -1,7 +1,7 @@
 # Faded Text
 
-[![](Surf#gh-dark-mode-only)](https://github.com/surfstudio/flutter-open-source/blob/887525c23f4d57a2d96fc2e6a31e15d1e29d1787/assets/logo_white.png#gh-dark-mode-only)
-[![](Surf#gh-light-mode-only)](https://github.com/surfstudio/flutter-open-source/blob/887525c23f4d57a2d96fc2e6a31e15d1e29d1787/assets/logo_black.png#gh-light-mode-only)
+[![Surf](Surf#gh-dark-mode-only)](https://github.com/surfstudio/flutter-open-source/blob/887525c23f4d57a2d96fc2e6a31e15d1e29d1787/assets/logo_white.png#gh-dark-mode-only)
+[![Surf](Surf#gh-light-mode-only)](https://github.com/surfstudio/flutter-open-source/blob/887525c23f4d57a2d96fc2e6a31e15d1e29d1787/assets/logo_black.png#gh-light-mode-only)
 
 Made by [Surf 🏄‍♂️🏄‍♂️🏄‍♂️](https://surf.dev/)
 
