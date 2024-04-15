@@ -1,4 +1,4 @@
-## 0.0.8
+## 0.0.9
 
 * Updated logo urls in readme and pub.dev badge url
 
