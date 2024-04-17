@@ -1,9 +1,7 @@
 # Faded Text
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/surfstudio/flutter-open-source/main/assets/logo_white.png">
-  <img alt="Black logo for light theme" src="https://raw.githubusercontent.com/surfstudio/flutter-open-source/main/assets/logo_black.png" width ="200">
-</picture>
+<img src="https://raw.githubusercontent.com/surfstudio/flutter-open-source/main/assets/logo_black.png#gh-light-mode-only" width="200">
+<img src="https://raw.githubusercontent.com/surfstudio/flutter-open-source/main/assets/logo_white.png#gh-dark-mode-only" width="200">
 
 Made by [Surf 🏄‍♂️🏄‍♂️🏄‍♂️](https://surf.dev/)
 
