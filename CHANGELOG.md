@@ -1,3 +1,9 @@
+# Changelog
+
+## 0.0.11
+
+* Correct logo position in readme.
+
 ## 0.0.10
 
 * Correct logo
